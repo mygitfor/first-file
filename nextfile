@@ -1,2 +1,9 @@
-this is a file
-file of good
+FROM ubuntu:14.04
+RUN apt-get update && apt-get install apache2 \
+    zip /
+    unzip /
+    tree
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page264/expertum.zip
+WORKDIR /var/www/html/
+RUN unzip expertum.zip
+COPY index.html /var/www/html
